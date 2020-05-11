@@ -12,4 +12,12 @@ https://www.youtube.com/watch?v=AoBj0imqKiQ&t=100s
 
 ## About author
 
-It is my PhD work in Penza State University at Russia, now I study in last course. Now I cant share all my programs, but after graduation of university I will share all of documents about this project, and all who won't will can create this system at his home .
+It is my PhD work in Penza State University at Russia, now I study in last course. Now I cant share all my programs, but after graduation of university I will share all of documents about this project, and all who won't will can create this system at his home.
+
+## Contacts
+
+https://t.me/boosoov
+
+boosoov@gmail.com
+
+https://www.facebook.com/profile.php?id=100005576196577
