@@ -1,0 +1,15 @@
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\arm\bin\armproc.dll" 
+
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\arm\bin\armstlink2.dll" 
+
+"C:\ВУЗ\Аспирантура\УЗ_сист\STM32\Oscilograf\STM32F411_Oscilograf_11_05_2020_2\STM32F411_Receiver\EWARM\STM32F411_Receiver\Exe\STM32F411_Receiver.out" 
+
+--plugin "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\arm\bin\armbat.dll" 
+
+--device_macro "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\arm\config\debugger\ST\STM32F4xx.dmac" 
+
+--flash_loader "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\arm\config\flashloader\ST\FlashSTM32F411xE.board" 
+
+
+
+
