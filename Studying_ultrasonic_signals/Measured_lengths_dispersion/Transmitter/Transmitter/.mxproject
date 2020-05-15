@@ -1,7 +1,7 @@
 [PreviousGenFiles]
-HeaderPath=C:/ВУЗ/Аспирантура/УЗ_сист/STM32/UZS/PWM Generator/Generator_Regulator_PWM_trig_11.05.2020/Transmitter/Inc
+HeaderPath=C:/ВУЗ/Аспирантура/УЗ_сист/STM32/UZS/PWM Generator/Generator_Regulator_PWM_trig_13.05.2020_interrupt/Transmitter/Inc
 HeaderFiles=stm32f1xx_it.h;stm32f1xx_hal_conf.h;main.h;
-SourcePath=C:/ВУЗ/Аспирантура/УЗ_сист/STM32/UZS/PWM Generator/Generator_Regulator_PWM_trig_11.05.2020/Transmitter/Src
+SourcePath=C:/ВУЗ/Аспирантура/УЗ_сист/STM32/UZS/PWM Generator/Generator_Regulator_PWM_trig_13.05.2020_interrupt/Transmitter/Src
 SourceFiles=stm32f1xx_it.c;stm32f1xx_hal_msp.c;main.c;
 
 [PreviousLibFiles]

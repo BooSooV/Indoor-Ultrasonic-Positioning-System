@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\common\bin\cspybat" -f "C:\ВУЗ\Аспирантура\УЗ_сист\STM32\UZS\PWM Generator\Generator_Regulator_PWM_trig_11.05.2020\Transmitter\EWARM\settings\Transmitter.Transmitter.general.xcl" --backend -f "C:\ВУЗ\Аспирантура\УЗ_сист\STM32\UZS\PWM Generator\Generator_Regulator_PWM_trig_11.05.2020\Transmitter\EWARM\settings\Transmitter.Transmitter.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\common\bin\cspybat" -f "C:\ВУЗ\Аспирантура\УЗ_сист\STM32\UZS\PWM Generator\Generator_Regulator_PWM_trig_14.05.2020_2_interrupt\Transmitter\EWARM\settings\Transmitter.Transmitter.general.xcl" --backend -f "C:\ВУЗ\Аспирантура\УЗ_сист\STM32\UZS\PWM Generator\Generator_Regulator_PWM_trig_14.05.2020_2_interrupt\Transmitter\EWARM\settings\Transmitter.Transmitter.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\common\bin\cspybat" -f "C:\ВУЗ\Аспирантура\УЗ_сист\STM32\UZS\PWM Generator\Generator_Regulator_PWM_trig_11.05.2020\Transmitter\EWARM\settings\Transmitter.Transmitter.general.xcl" "--debug_file=%~1" --backend -f "C:\ВУЗ\Аспирантура\УЗ_сист\STM32\UZS\PWM Generator\Generator_Regulator_PWM_trig_11.05.2020\Transmitter\EWARM\settings\Transmitter.Transmitter.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\common\bin\cspybat" -f "C:\ВУЗ\Аспирантура\УЗ_сист\STM32\UZS\PWM Generator\Generator_Regulator_PWM_trig_14.05.2020_2_interrupt\Transmitter\EWARM\settings\Transmitter.Transmitter.general.xcl" "--debug_file=%~1" --backend -f "C:\ВУЗ\Аспирантура\УЗ_сист\STM32\UZS\PWM Generator\Generator_Regulator_PWM_trig_14.05.2020_2_interrupt\Transmitter\EWARM\settings\Transmitter.Transmitter.driver.xcl" 
 
 @echo off 
 :end

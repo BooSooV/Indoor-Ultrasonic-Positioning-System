@@ -1,3 +1,4 @@
+
 #include "main.h"
 #include "stm32f1xx_hal.h"
 
@@ -6,8 +7,7 @@ DMA_HandleTypeDef hdma_adc1;
 TIM_HandleTypeDef htim4;
 UART_HandleTypeDef huart1;
 
-uint16_t period;
-int a,b,c;
+extern uint16_t period;
 
 
 void SystemClock_Config(void);
@@ -18,50 +18,36 @@ static void MX_USART1_UART_Init(void);
 static void MX_TIM4_Init(void);
                                     
 void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
-
-
-  
+                                
 
 int main(void)
 {
+
   HAL_Init();
   SystemClock_Config();
-
   MX_GPIO_Init();
   MX_DMA_Init();
   MX_ADC1_Init();
   MX_USART1_UART_Init();
+  //MX_TIM4_Init();
   
-  period = 2900;
+  period =1800;//2900    1800
   MX_TIM4_Init();
 
   HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_1);
   HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_2);
-  TIM4->CCR1=0;
-  TIM4->CCR2=0;  
-    
+  
+  TIM4->CCR1=period/2;
+  TIM4->CCR2=period/2;
+  
+  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
+  
   while (1)
   {
-    if(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_5) != 0x00) 
-    {   
-      TIM4->CCR1=period/2;
-      TIM4->CCR2=period/2;
+    
 
-      for(a=0;a<350;a++)//delay
-      {
-        b = 12345/864;
-      }
-      
-      TIM4->CCR1=0;
-      TIM4->CCR2=0; 
-      HAL_Delay(50);
-    }
   }
 }
-
-
-
-
 
 
 
@@ -268,11 +254,21 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
+  /*Configure GPIO pin : PA3 */
+  GPIO_InitStruct.Pin = GPIO_PIN_3;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
   /*Configure GPIO pin : PA5 */
   GPIO_InitStruct.Pin = GPIO_PIN_5;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI3_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI3_IRQn);
 
 }
 
